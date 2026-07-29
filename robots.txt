@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.movewithmb.com.au/sitemap.xml
+Sitemap: https://movewithmb.com.au/sitemap.xml
