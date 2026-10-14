@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Physiotherapy Austral | Home Visit Physio | Move With MB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- ── LOCAL SEO: META ── -->
+  <meta name="description" content="Mobile physiotherapy in Austral, Leppington and Catherine Field. Home visit physio from an AHPRA-registered physiotherapist. Call to arrange a visit." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://movewithmb.com.au/mobile-physio-austral.html" />
+
+  <!-- ── LOCAL SEO: OPEN GRAPH / SOCIAL ── -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Mobile Physiotherapy Austral | Home Visit Physio | Move With MB" />
+  <meta property="og:description" content="Mobile physiotherapy in Austral, Leppington and Catherine Field — hands-on physio at your home." />
+  <meta property="og:url" content="https://movewithmb.com.au/mobile-physio-austral.html" />
+  <meta property="og:site_name" content="Move With MB Physiotherapy" />
+  <meta property="og:locale" content="en_AU" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mobile Physiotherapy Austral | Home Visit Physio | Move With MB" />
+  <meta name="twitter:description" content="Mobile physiotherapy in Austral, Leppington and Catherine Field — hands-on physio at your home." />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF7F2;
+      --dark: #1A1A18;
+      --forest: #2D4A3E;
+      --sage: #7A9E8E;
+      --sand: #C4A882;
+      --warm-white: #F5EFE6;
+      --accent: #E8B86D;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: var(--cream);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196,168,130,0.2);
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--dark);
+      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta {
+      background: var(--forest); color: #fff !important;
+      padding: 0.6rem 1.4rem; border-radius: 100px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--sage) !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sand); font-weight: 600; margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 4.4vw, 4.2rem);
+      line-height: 1.14; color: var(--forest);
+      margin-bottom: 0.4rem;
+    }
+    .hero-title em { font-style: italic; color: var(--sand); }
+    .hero-subtitle {
+      font-size: 1.05rem; color: #555; line-height: 1.7;
+      max-width: 500px; margin: 1.8rem 0 2.8rem;
+      font-weight: 300;
+    }
+    .hero-ctas { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--forest); color: #fff;
+      padding: 1rem 2rem; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(45,74,62,0.3);
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #1e3329; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(45,74,62,0.4); }
+    .btn-secondary {
+      color: var(--forest); text-decoration: none; font-weight: 500; font-size: 0.9rem;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+    .btn-secondary:hover { gap: 0.8rem; }
+
+    .hero-badges { display: flex; gap: 1rem; margin-top: 3rem; flex-wrap: wrap; }
+    .badge {
+      background: var(--warm-white); border: 1px solid rgba(196,168,130,0.3);
+      border-radius: 100px; padding: 0.45rem 1rem;
+      font-size: 0.78rem; color: #666; font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .badge-dot { width:6px; height:6px; border-radius:50%; background: var(--sage); flex-shrink:0; }
+
+    .hero-right { background: var(--forest); position: relative; overflow: hidden; }
+    .hero-stat-card {
+      position: absolute; bottom: 2.5rem; left: 2.5rem;
+      background: rgba(250,247,242,0.08); backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 1.2rem 1.6rem;
+      color: #fff;
+    }
+    .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; }
+    .hero-stat-label { font-size: 0.78rem; opacity: 0.6; margin-top: 0.2rem; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--forest);
+      padding: 1.4rem 5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      color: rgba(255,255,255,0.8); font-size: 0.85rem;
+      display: flex; align-items: center; gap: 0.6rem; font-weight: 400;
+    }
+    .trust-icon { font-size: 1.1rem; }
+    .trust-divider { width:1px; height:24px; background: rgba(255,255,255,0.15); }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 6rem 5rem; }
+    .section-label {
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sand); font-weight: 600; margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--forest); line-height: 1.2; margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--sand); }
+    .section-lead { font-size: 1rem; color: #666; max-width: 620px; margin-bottom: 3rem; font-weight: 300; line-height: 1.7; }
+
+    /* ── HOW IT WORKS ── */
+    .how-it-works { background: var(--cream); }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card {
+      background: #fff; border-radius: 20px; padding: 2.2rem;
+      border: 1px solid rgba(196,168,130,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background: linear-gradient(90deg, var(--forest), var(--sage));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--forest); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+    .service-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--forest); margin-bottom: 0.8rem; }
+    .service-desc { font-size: 0.88rem; color: #666; line-height: 1.7; font-weight: 300; }
+
+    /* ── CONDITIONS ── */
+    .conditions { background: var(--forest); color: #fff; }
+    .conditions .section-title { color: #fff; }
+    .conditions-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem; }
+    .condition-pill {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px; padding: 0.55rem 1.2rem;
+      font-size: 0.88rem; color: rgba(255,255,255,0.85);
+      transition: background 0.2s, border-color 0.2s;
+      cursor: default;
+    }
+    .condition-pill:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.3); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--warm-white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+    .testimonial-card {
+      background: #fff; border-radius: 20px; padding: 2rem;
+      border: 1px solid rgba(196,168,130,0.15);
+    }
+    .stars { color: var(--accent); font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .testimonial-text { font-size: 0.92rem; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 1.5rem; font-weight: 300; }
+    .testimonial-author { font-weight: 600; font-size: 0.85rem; color: var(--forest); }
+    .testimonial-sub { font-size: 0.78rem; color: #999; margin-top: 0.2rem; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--cream); }
+    .faq-item { border-bottom: 1px solid rgba(196,168,130,0.25); padding: 1.4rem 0; }
+    .faq-item summary {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--forest);
+      cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--sand); }
+    .faq-item[open] summary::after { content: '–'; }
+    .faq-item p { font-size: 0.9rem; color: #666; margin-top: 0.8rem; font-weight: 300; line-height: 1.7; max-width: 640px; }
+
+    /* ── HOURS + CTA ── */
+    .booking-section {
+      background: var(--cream);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .hours-list { margin-top: 2rem; }
+    .hours-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 0; border-bottom: 1px solid rgba(196,168,130,0.2);
+      font-size: 0.92rem;
+    }
+    .hours-day { font-weight: 500; color: var(--dark); }
+    .hours-time { color: var(--forest); font-weight: 600; }
+    .hours-closed { color: #bbb; }
+    .hours-highlight {
+      background: rgba(45,74,62,0.06); border-radius: 12px; padding: 1rem 1.2rem;
+      margin-top: 1.5rem; font-size: 0.85rem; color: var(--forest);
+      display: flex; align-items: center; gap: 0.7rem;
+    }
+    .cta-box {
+      background: var(--forest); border-radius: 28px; padding: 3.5rem;
+      color: #fff; text-align: center;
+    }
+    .cta-box-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+    .cta-box-body { font-size: 0.92rem; opacity: 0.75; line-height: 1.7; margin-bottom: 2rem; font-weight: 300; }
+    .btn-cta-white {
+      background: #fff; color: var(--forest);
+      padding: 1rem 2.4rem; border-radius: 100px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .cta-phone { margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.6; }
+    .cta-phone a { color: #fff; font-weight: 600; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); color: rgba(255,255,255,0.6);
+      padding: 3rem 5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.78rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .how-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 320px; order: -1; }
+      .hero-left { padding: 3rem 1.5rem; }
+      section { padding: 4rem 1.5rem; }
+      .booking-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .how-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .trust-strip { padding: 1.2rem 1.5rem; justify-content: center; }
+      .trust-divider { display: none; }
+      footer { flex-direction: column; padding: 2rem 1.5rem; text-align: center; }
+      .footer-links { justify-content: center; }
+      body { padding-bottom: 64px; }
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: rgba(26,26,24,0.92); backdrop-filter: blur(10px);
+      padding: 0.8rem 1.2rem;
+      display: none; justify-content: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .sticky-cta a {
+      background: var(--accent); color: var(--dark);
+      padding: 0.85rem 2rem; border-radius: 100px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      width: 100%; max-width: 420px; text-align: center;
+    }
+    @media (max-width: 900px) { .sticky-cta { display: flex; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html" style="background:var(--forest);border-radius:100px;padding:0.3rem 0.8rem;display:flex;align-items:center;"><img src="images/logo.svg" alt="Move With MB Physiotherapy" loading="eager" style="height:38px;width:auto;display:block;"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#booking">Contact</a></li>
+    <li><a href="https://move-with-mb.au5.cliniko.com/bookings" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Mobile Physiotherapy · Austral, NSW</p>
+    <h1 class="hero-title">
+      Physio that comes<br>to <em>you</em>.
+    </h1>
+    <p class="hero-subtitle">
+      Home visit physiotherapy in Austral and surrounding suburbs — the same hands-on, evidence-based care, in the comfort of your own home.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://move-with-mb.au5.cliniko.com/bookings" class="btn-primary">Arrange a Home Visit</a>
+      <a href="tel:0429603839" class="btn-secondary">Call 0429 603 839</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span>AHPRA Registered</span>
+      <span class="badge"><span class="badge-dot"></span>Home Visits Available</span>
+      <span class="badge"><span class="badge-dot"></span>Hands-on Treatment</span>
+      <span class="badge"><span class="badge-dot"></span>Claims Accepted</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="images/hero-photo.jpg" alt="Matthew Babic performing physiotherapy treatment" loading="eager" fetchpriority="high" decoding="async" width="1261" height="1600" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">🏠</span> Treatment at your home</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-icon">🩺</span> Same care as the clinic</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Austral, Leppington &amp; Catherine Field</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <p class="section-label">How it works</p>
+  <h2 class="section-title">Clinic-quality physio, <em>without the travel</em></h2>
+  <p class="section-lead">Getting to a clinic is not always realistic. Here is how home visits work.</p>
+  <div class="how-grid">
+    <div class="service-card">
+      <div class="step-num">1</div>
+      <h3 class="service-name">Get in touch</h3>
+      <p class="service-desc">Call or book online and let us know your address and what you are dealing with.</p>
+    </div>
+    <div class="service-card">
+      <div class="step-num">2</div>
+      <h3 class="service-name">We come to you</h3>
+      <p class="service-desc">Your physiotherapist visits your home with what is needed for assessment and treatment.</p>
+    </div>
+    <div class="service-card">
+      <div class="step-num">3</div>
+      <h3 class="service-name">Ongoing care</h3>
+      <p class="service-desc">Treatment, exercises and a clear plan — and you can switch to the clinic whenever suits you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="conditions">
+  <p class="section-label" style="color:rgba(255,255,255,0.5);">Who home visits suit</p>
+  <h2 class="section-title">When a home visit makes sense</h2>
+  <div class="conditions-grid">
+    <span class="condition-pill">Recovering after surgery</span>
+    <span class="condition-pill">Limited mobility</span>
+    <span class="condition-pill">Pain that makes travel difficult</span>
+    <span class="condition-pill">Busy parents &amp; carers</span>
+    <span class="condition-pill">Older adults</span>
+    <span class="condition-pill">Injuries that limit driving</span>
+    <span class="condition-pill">WorkCover &amp; CTP injuries</span>
+    <span class="condition-pill">NDIS participants</span>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <p class="section-label">Patient reviews</p>
+  <h2 class="section-title">What our patients <em>say</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Fantastic physio in Austral. Matt helped me with my back pain and got me moving confidently again. Great service all around."</p>
+      <p class="testimonial-author">Rocky F.</p>
+      <p class="testimonial-sub">Back pain · Cecil Hills NSW</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Professional and knowledgeable. A welcoming experience from start to finish. Friendly, attentive and explains everything clearly. Left feeling confident with a recovery plan."</p>
+      <p class="testimonial-author">Maria B.</p>
+      <p class="testimonial-sub">Foot pain · Austral NSW</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"The evening appointments are a game changer for working people like me. Professional, friendly, and results-focused. I've already recommended Move With MB to my whole family."</p>
+      <p class="testimonial-author">Priya K.</p>
+      <p class="testimonial-sub">Shoulder pain patient · Leppington</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <p class="section-label">Common questions</p>
+  <h2 class="section-title">Mobile physio <em>FAQs</em></h2>
+  <details class="faq-item">
+    <summary>Where do you travel?</summary>
+    <p>Austral, Leppington and Catherine Field and nearby suburbs. Call us with your address to check.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Is the treatment the same as at the clinic?</summary>
+    <p>Yes — assessment, hands-on treatment, exercise prescription and advice from the same AHPRA-registered physiotherapist.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What does a home visit cost?</summary>
+    <p>Contact us for current fees and availability — we will confirm before you book.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Can I use WorkCover, CTP, DVA or NDIS?</summary>
+    <p>Yes, where the treatment is covered by your claim or plan. Give us your details when you call and we will confirm.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Do I need a referral?</summary>
+    <p>No referral is needed to book privately.</p>
+  </details>
+</section>
+
+<!-- BOOKING + HOURS -->
+<section class="booking-section" id="booking">
+  <div>
+    <p class="section-label">Where we travel</p>
+    <h2 class="section-title">Service <em>area</em></h2>
+    <div class="hours-list">
+      <div class="hours-row"><span class="hours-day">Austral</span><span class="hours-time">Home visits</span></div>
+      <div class="hours-row"><span class="hours-day">Leppington</span><span class="hours-time">Home visits</span></div>
+      <div class="hours-row"><span class="hours-day">Catherine Field</span><span class="hours-time">Home visits</span></div>
+    </div>
+    <div class="hours-highlight">
+      🏠 &nbsp;Other nearby suburb? Call us with your address and we will let you know.
+    </div>
+  </div>
+  <div class="cta-box">
+    <h3 class="cta-box-title">Ready to arrange a home visit?</h3>
+    <p class="cta-box-body">Call us or book online and let us know where you are.</p>
+    <a href="https://move-with-mb.au5.cliniko.com/bookings" class="btn-cta-white">Book My Appointment</a>
+    <p class="cta-phone">Or call us on <a href="tel:0429603839">0429 603 839</a></p>
+    <p class="cta-phone" style="margin-top:0.5rem">📍 12 Preston St, Austral NSW 2179</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="images/logo.svg" alt="Move With MB Physiotherapy" loading="lazy" style="height:52px;width:auto;display:block;"></div>
+  <div class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#testimonials">Reviews</a>
+    <a href="index.html#booking">Contact</a>
+    <a href="personal-training-austral.html">Personal Training</a>
+    <a href="dry-needling-austral.html">Dry Needling</a>
+    <a href="post-surgical-rehab-austral.html">Post-Surgical Rehab</a>
+    <a href="mobile-physio-austral.html">Mobile Physio</a>
+    <a href="https://movewithmb.com.au/contact/privacy-policy">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">© 2026 Move With MB · Austral, NSW 2179</p>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://move-with-mb.au5.cliniko.com/bookings">Book Now</a>
+</div>
+
+</body>
+</html>

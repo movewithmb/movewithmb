@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Training Austral | Move With MB Personal Training</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- ── LOCAL SEO: META ── -->
+  <meta name="description" content="Group classes and 1:1 personal training in Austral, NSW with Maria Babic. Book your session by calling or texting 0448 165 746." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://movewithmb.com.au/personal-training-austral.html" />
+
+  <!-- ── LOCAL SEO: OPEN GRAPH / SOCIAL ── -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Personal Training Austral | Move With MB Personal Training" />
+  <meta property="og:description" content="Group classes and 1:1 personal training in Austral, NSW with Maria Babic." />
+  <meta property="og:url" content="https://movewithmb.com.au/personal-training-austral.html" />
+  <meta property="og:site_name" content="Move With MB Personal Training" />
+  <meta property="og:locale" content="en_AU" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Personal Training Austral | Move With MB Personal Training" />
+  <meta name="twitter:description" content="Group classes and 1:1 personal training in Austral, NSW with Maria Babic." />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF7F2;
+      --dark: #1A1A18;
+      --forest: #2D4A3E;
+      --sage: #7A9E8E;
+      --sand: #C4A882;
+      --warm-white: #F5EFE6;
+      --accent: #E8B86D;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: var(--cream);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(196,168,130,0.2);
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--dark);
+      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta {
+      background: var(--forest); color: #fff !important;
+      padding: 0.6rem 1.4rem; border-radius: 100px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--sage) !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sand); font-weight: 600; margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 4.4vw, 4.2rem);
+      line-height: 1.14; color: var(--forest);
+      margin-bottom: 0.4rem;
+    }
+    .hero-title em { font-style: italic; color: var(--sand); }
+    .hero-subtitle {
+      font-size: 1.05rem; color: #555; line-height: 1.7;
+      max-width: 500px; margin: 1.8rem 0 2.8rem;
+      font-weight: 300;
+    }
+    .hero-ctas { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--forest); color: #fff;
+      padding: 1rem 2rem; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(45,74,62,0.3);
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #1e3329; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(45,74,62,0.4); }
+    .btn-secondary {
+      color: var(--forest); text-decoration: none; font-weight: 500; font-size: 0.9rem;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+    .btn-secondary:hover { gap: 0.8rem; }
+
+    .hero-badges { display: flex; gap: 1rem; margin-top: 3rem; flex-wrap: wrap; }
+    .badge {
+      background: var(--warm-white); border: 1px solid rgba(196,168,130,0.3);
+      border-radius: 100px; padding: 0.45rem 1rem;
+      font-size: 0.78rem; color: #666; font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .badge-dot { width:6px; height:6px; border-radius:50%; background: var(--sage); flex-shrink:0; }
+
+    .hero-right { background: var(--forest); position: relative; overflow: hidden; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--forest);
+      padding: 1.4rem 5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      color: rgba(255,255,255,0.8); font-size: 0.85rem;
+      display: flex; align-items: center; gap: 0.6rem; font-weight: 400;
+    }
+    .trust-icon { font-size: 1.1rem; }
+    .trust-divider { width:1px; height:24px; background: rgba(255,255,255,0.15); }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 6rem 5rem; }
+    .section-label {
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sand); font-weight: 600; margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--forest); line-height: 1.2; margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--sand); }
+    .section-lead { font-size: 1rem; color: #666; max-width: 620px; margin-bottom: 3rem; font-weight: 300; line-height: 1.7; }
+
+    /* ── OFFERINGS ── */
+    .offerings { background: var(--cream); }
+    .offerings-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .service-card {
+      background: #fff; border-radius: 20px; padding: 2.4rem;
+      border: 1px solid rgba(196,168,130,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background: linear-gradient(90deg, var(--forest), var(--sage));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 2rem; margin-bottom: 1.2rem; }
+    .service-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--forest); margin-bottom: 0.8rem; }
+    .service-desc { font-size: 0.92rem; color: #666; line-height: 1.75; font-weight: 300; }
+
+    /* ── TRAINER ── */
+    .trainer { background: var(--forest); color: #fff; }
+    .trainer .section-label { color: rgba(255,255,255,0.5); }
+    .trainer .section-title { color: #fff; }
+    .trainer-body { font-size: 1rem; line-height: 1.8; opacity: 0.85; max-width: 640px; font-weight: 300; }
+    .trainer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .trainer-img {
+      aspect-ratio: 4/5; background: var(--sage);
+      border-radius: 200px 200px 0 0; position: relative; overflow: hidden;
+    }
+
+    /* ── FAQ ── */
+    .faq { background: var(--warm-white); }
+    .faq-item { border-bottom: 1px solid rgba(196,168,130,0.25); padding: 1.4rem 0; }
+    .faq-item summary {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--forest);
+      cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--sand); }
+    .faq-item[open] summary::after { content: '–'; }
+    .faq-item p { font-size: 0.9rem; color: #666; margin-top: 0.8rem; font-weight: 300; line-height: 1.7; max-width: 640px; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--cream); }
+    .cta-box {
+      background: var(--forest); border-radius: 28px; padding: 3.5rem;
+      color: #fff; text-align: center;
+    }
+    .cta-box-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+    .cta-box-body { font-size: 0.92rem; opacity: 0.75; line-height: 1.7; margin-bottom: 2rem; font-weight: 300; }
+    .cta-box-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-white {
+      background: #fff; color: var(--forest);
+      padding: 1rem 2.4rem; border-radius: 100px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .btn-cta-outline {
+      background: transparent; color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 1rem 2.4rem; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      display: inline-block;
+    }
+    .cta-address { margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); color: rgba(255,255,255,0.6);
+      padding: 3rem 5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.78rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .offerings-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .trainer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 280px; order: -1; }
+      .hero-left { padding: 3rem 1.5rem; }
+      section { padding: 4rem 1.5rem; }
+      .trust-strip { padding: 1.2rem 1.5rem; justify-content: center; }
+      .trust-divider { display: none; }
+      footer { flex-direction: column; padding: 2rem 1.5rem; text-align: center; }
+      .footer-links { justify-content: center; }
+      body { padding-bottom: 64px; }
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: rgba(26,26,24,0.92); backdrop-filter: blur(10px);
+      padding: 0.8rem 1.2rem;
+      display: none; justify-content: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .sticky-cta a {
+      background: var(--accent); color: var(--dark);
+      padding: 0.85rem 2rem; border-radius: 100px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      width: 100%; max-width: 420px; text-align: center;
+    }
+    @media (max-width: 900px) { .sticky-cta { display: flex; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html" style="background:var(--forest);border-radius:100px;padding:0.3rem 0.8rem;display:flex;align-items:center;"><img src="images/logo.svg" alt="Move With MB" loading="eager" style="height:38px;width:auto;display:block;"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#booking">Contact</a></li>
+    <li><a href="tel:0448165746" class="nav-cta">Book a Session</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Move With MB Personal Training · Austral, NSW</p>
+    <h1 class="hero-title">
+      Train with<br>
+      <em>purpose</em>,<br>
+      not just effort.
+    </h1>
+    <p class="hero-subtitle">
+      Group classes and 1:1 personal training with Maria Babic, in Austral — built around real goals, at a pace that actually works for you.
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:0448165746" class="btn-primary">Call to Book</a>
+      <a href="sms:0448165746" class="btn-secondary">Text 0448 165 746</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span>Group Classes</span>
+      <span class="badge"><span class="badge-dot"></span>1:1 Personal Training</span>
+      <span class="badge"><span class="badge-dot"></span>All Fitness Levels</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="images/pt-hero-photo.jpg" alt="Maria Babic coaching a client during a personal training session in Austral" loading="eager" fetchpriority="high" decoding="async" width="1056" height="1528" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">💪</span> Group &amp; 1:1 sessions</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Austral, South-West Sydney</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-icon">📱</span> Book by call or text</div>
+</div>
+
+<!-- OFFERINGS -->
+<section class="offerings">
+  <p class="section-label">Training options</p>
+  <h2 class="section-title">Train <em>your</em> way</h2>
+  <p class="section-lead">Whether you thrive on group energy or prefer one-on-one focus, there's a format that fits.</p>
+  <div class="offerings-grid">
+    <div class="service-card">
+      <div class="service-icon">👥</div>
+      <h3 class="service-name">Group Classes</h3>
+      <p class="service-desc">Train alongside others in a supportive, energising setting. Sessions are scalable to suit every fitness level, from complete beginners to experienced gym-goers.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3 class="service-name">1:1 Personal Training</h3>
+      <p class="service-desc">Fully individualised programming and one-on-one coaching, built around your specific goals, schedule, and starting point.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section class="trainer">
+  <div class="trainer-inner">
+    <div class="trainer-img">
+      <img src="images/maria-portrait.jpg" alt="Maria Babic, personal trainer at Move With MB Personal Training" loading="lazy" decoding="async" width="738" height="979" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+    </div>
+    <div>
+      <p class="section-label">Your Trainer</p>
+      <h2 class="section-title">Meet Maria</h2>
+      <p class="trainer-body">Maria Babic runs Move With MB Personal Training from the same Austral studio space as Move With MB Physiotherapy — offering group classes and 1:1 personal training to the local community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <p class="section-label">Common questions</p>
+  <h2 class="section-title">Personal training <em>FAQs</em></h2>
+  <details class="faq-item">
+    <summary>Do I need to be fit to join a group class?</summary>
+    <p>Not at all — sessions are scaled to suit all fitness levels, from complete beginners to experienced gym-goers.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What should I bring to a session?</summary>
+    <p>Comfortable workout clothes, closed-toe shoes, and a water bottle.</p>
+  </details>
+  <details class="faq-item">
+    <summary>How do I book a session?</summary>
+    <p>Call or text Maria directly on 0448 165 746 to book a spot in a group class or arrange a 1:1 session.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Where are sessions held?</summary>
+    <p>At 12 Preston St, Austral NSW 2179 — the same location as Move With MB Physiotherapy.</p>
+  </details>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box">
+    <h2 class="cta-box-title">Ready to start training?</h2>
+    <p class="cta-box-body">Call or text to book your spot in a group class, or arrange a 1:1 session that fits your schedule.</p>
+    <div class="cta-box-ctas">
+      <a href="tel:0448165746" class="btn-cta-white">Call 0448 165 746</a>
+      <a href="sms:0448165746" class="btn-cta-outline">Text Instead</a>
+    </div>
+    <p class="cta-address">📍 12 Preston St, Austral NSW 2179</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="images/logo.svg" alt="Move With MB" loading="lazy" style="height:52px;width:auto;display:block;"></div>
+  <div class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#testimonials">Reviews</a>
+    <a href="index.html#booking">Contact</a>
+    <a href="workcover-physio-austral.html">WorkCover Physio</a>
+    <a href="dva-physio-austral.html">DVA Physio</a>
+    <a href="sports-injury-physio-austral.html">Sports Injury Physio</a>
+    <a href="personal-training-austral.html">Personal Training</a>
+    <a href="dry-needling-austral.html">Dry Needling</a>
+    <a href="post-surgical-rehab-austral.html">Post-Surgical Rehab</a>
+    <a href="mobile-physio-austral.html">Mobile Physio</a>
+    <a href="https://movewithmb.com.au/contact/privacy-policy">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">© 2026 Move With MB · Austral, NSW 2179</p>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="tel:0448165746">Call to Book</a>
+</div>
+
+</body>
+</html>
