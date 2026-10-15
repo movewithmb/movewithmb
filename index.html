@@ -256,7 +256,12 @@
     .section-title em { font-style: italic; color: var(--sand); }
 
     /* ── ABOUT ── */
-    .about { background: var(--warm-white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about { background: var(--warm-white); }
+    .about-people { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+    .about-person { display: flex; flex-direction: column; }
+    .about-person .about-img { width: 100%; margin-bottom: 2rem; }
+    .about-person .credentials { margin-top: 1.5rem; }
+    .about-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
     .about-img {
       aspect-ratio: 4/5; background: var(--sage);
       border-radius: 200px 200px 0 0; position: relative; overflow: hidden;
@@ -386,7 +391,8 @@
       .hero-right { min-height: 320px; order: -1; }
       .hero-left { padding: 3rem 1.5rem; }
       section { padding: 4rem 1.5rem; }
-      .about, .booking-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .booking-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-people { grid-template-columns: 1fr; gap: 3.5rem; }
       .services-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .services-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -441,7 +447,7 @@
       Limitation.
     </h1>
     <p class="hero-subtitle">
-      Personalised, evidence-based physiotherapy in Austral for pain relief, injury rehab, and long-term performance — with evening and Saturday appointments to fit your week.
+      Personalised, evidence-based physiotherapy for pain relief, injury rehab, and long-term performance — with evening and Saturday appointments to fit your week.
     </p>
     <div class="hero-ctas">
       <a href="https://move-with-mb.au5.cliniko.com/bookings" class="btn-primary">Book an Appointment</a>
@@ -474,24 +480,54 @@
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="about-img">
-    <img src="images/about-photo.jpg" alt="Matthew Babic, Principal Physiotherapist" loading="lazy" decoding="async" width="1050" height="1400" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
-  </div>
-  <div>
-    <p class="section-label">Meet your physio</p>
-    <h2 class="about-name">Matthew Babic</h2>
-    <p class="about-title-tag">Principal Physiotherapist &amp; Founder · 9+ Years Experience</p>
-    <div class="about-body">
-      <p>Matthew Babic has spent over 9 years helping people overcome pain, recover from injury, and get back to doing what they love — combining hands-on physiotherapy, soft tissue therapy and strength-based rehab to treat the cause, not just the symptom.</p>
-      <p>From back and neck pain to sports injuries and post-surgical recovery, you'll get individualised care, practical guidance, and a clear plan from day one.</p>
+  <p class="section-label">Meet the team</p>
+  <h2 class="section-title">Two trainers, <em>one</em> studio</h2>
+  <div class="about-people">
+
+    <div class="about-person">
+      <div class="about-img">
+        <img src="images/about-photo.jpg" alt="Matthew Babic, Principal Physiotherapist" loading="lazy" decoding="async" width="1050" height="1400" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <p class="section-label">Your physio</p>
+      <h3 class="about-name">Matthew Babic</h3>
+      <p class="about-title-tag">Principal Physiotherapist &amp; Founder · 9+ Years Experience</p>
+      <div class="about-body">
+        <p>Matthew Babic has spent over 9 years helping people overcome pain, recover from injury, and get back to doing what they love — combining hands-on physiotherapy, soft tissue therapy and strength-based rehab to treat the cause, not just the symptom.</p>
+        <p>From back and neck pain to sports injuries and post-surgical recovery, you'll get individualised care, practical guidance, and a clear plan from day one.</p>
+      </div>
+      <div class="credentials">
+        <span class="cred-tag">Hands-on Physiotherapy</span>
+        <span class="cred-tag">Soft Tissue Therapy</span>
+        <span class="cred-tag">Strength Rehab</span>
+        <span class="cred-tag">Sports Injuries</span>
+      </div>
+      <div class="about-actions">
+        <a href="https://move-with-mb.au5.cliniko.com/bookings" class="btn-primary" style="display:inline-block;">Book My Appointment</a>
+      </div>
     </div>
-    <div class="credentials">
-      <span class="cred-tag">Hands-on Physiotherapy</span>
-      <span class="cred-tag">Soft Tissue Therapy</span>
-      <span class="cred-tag">Strength Rehab</span>
-      <span class="cred-tag">Sports Injuries</span>
+
+    <div class="about-person">
+      <div class="about-img">
+        <img src="images/maria-portrait.jpg" alt="Maria Babic, personal trainer at Move With MB Personal Training" loading="lazy" decoding="async" width="738" height="979" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <p class="section-label">Your trainer</p>
+      <h3 class="about-name">Maria Babic</h3>
+      <p class="about-title-tag">Personal Trainer · 10+ Years Experience</p>
+      <div class="about-body">
+        <p>Maria Babic has spent over 10 years helping people of all fitness levels feel stronger, healthier and more confident on their fitness journey — through group classes and 1:1 personal training built around your goals.</p>
+        <p>Whether you're just starting out or getting back into training, you'll get supportive, individualised coaching that fits your schedule.</p>
+      </div>
+      <div class="credentials">
+        <span class="cred-tag">Group Classes</span>
+        <span class="cred-tag">1:1 Personal Training</span>
+        <span class="cred-tag">All Fitness Levels</span>
+      </div>
+      <div class="about-actions">
+        <a href="tel:0448165746" class="btn-primary" style="display:inline-block;">Call to Book</a>
+        <a href="personal-training-austral.html" class="btn-secondary">Learn more</a>
+      </div>
     </div>
-    <a href="https://move-with-mb.au5.cliniko.com/bookings" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Book My Appointment</a>
+
   </div>
 </section>
 
